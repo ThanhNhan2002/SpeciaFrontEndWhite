@@ -1,9 +1,20 @@
 
 import React, { Component } from 'react';
+import DigitalWorkerList from './DigitalWorkerList';
+
+import styles from './DigitalWorkers.module.css'; 
+
+import Header from './Header';
 
 export default () => {
     return (
-        <div style={{textAlign: "left", marginLeft: "50px", marginRight: "50px", marginTop: "30px"}}>
+        <div style={{position: 'relative'}}>
+            <div className={styles.background} style={{height: '60vw', width: '100%', position: 'absolute', zIndex: '-10'}}>
+            </div>
+            <div style={{textAlign: "left", paddingLeft: "30px", paddingRight: "50px", paddingTop: "30px", paddingBottom: "50px", zIndex: '10'}}>
+                <Header/>
+                <DigitalWorkerList/>
+            </div>
         </div>
     )
 }
