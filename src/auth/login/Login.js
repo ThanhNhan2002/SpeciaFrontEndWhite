@@ -1,11 +1,32 @@
+import React, { useEffect } from "react";
+
 import Form from 'react-bootstrap/Form';
 
 import Button from 'react-bootstrap/Button';
 
-import { Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
+
+import Cookies from 'js-cookie';
 
 
 export default () => {
+
+
+    const navigate = useNavigate();
+
+
+
+    const checkUserToken = () => {
+
+        let token = Cookies.get('oidc_id_token')
+
+        if (token){
+            return navigate('/');
+        }
+    }
+    useEffect(() => {
+            checkUserToken();
+        });
 
     
 

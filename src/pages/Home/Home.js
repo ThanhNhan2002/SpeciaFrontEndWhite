@@ -1,21 +1,15 @@
 import React, { Component } from 'react';
+import Header from './Header';
+
+import styles from './Home.module.css'; 
 
 export default () => {
     return (
-        <div style={{textAlign: "left", marginLeft: "50px", marginRight: "50px", marginTop: "30px"}}>
-            <div>
-                <p style={{fontSize: '2.5rem'}}>Welcome, Username!</p>
-                <div style={{display: "flex", height: "35vh", marginTop: '50px'}}>
-                    <div style={{flex: 1, backgroundColor: "white", marginRight: '10px'}}></div>
-                    <div style={{flex: 1, backgroundColor: "white", marginRight: '10px'}}></div>
-                    <div style={{flex: 1, backgroundColor: "white", marginRight: '10px'}}></div>
-                    <div style={{flex: 1, backgroundColor: "white", marginRight: '10px'}}></div>
-                    <div style={{flex: 1, backgroundColor: "white"}}></div>
-                </div>
-                <div style={{display: "flex", height: "35vh", marginTop: '10px'}}>
-                    <div style={{flex: 1, backgroundColor: "white", marginRight: '10px'}}></div>
-                    <div style={{flex: 1, backgroundColor: "white"}}></div>
-                </div>
+        <div style={{position: 'relative'}}>
+            <div className={styles.background} style={{height: '60vw', width: '100%', position: 'absolute', zIndex: '-10'}}>
+            </div>
+            <div style={{textAlign: "left", paddingLeft: "30px", paddingRight: "50px", paddingTop: "30px", paddingBottom: "50px", zIndex: '10'}}>
+                <Header/>
             </div>
         </div>
     )

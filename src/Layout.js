@@ -1,4 +1,4 @@
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, Link, useLocation } from "react-router-dom";
 import React, { Component } from 'react';
 
 import { useNavigate, useSearchParams } from "react-router-dom";
@@ -8,10 +8,12 @@ const Layout = () => {
 
   const navigate = useNavigate();
 
+  const location = useLocation()
+
 
   function logout(){
     console.log('log out')
-    Cookies.remove('token')
+    Cookies.remove('oidc_id_token')
     return navigate('/auth/login')
   }
 
@@ -32,17 +34,17 @@ const Layout = () => {
                   </ul>
                 </li>
                 <div style={{flex: 1, justifyContent: 'center', display: 'flex', flexDirection: 'column'}}>
-                  <li style={{marginLeft: "30px", marginRight: "30px", marginTop: "40px", marginBottom: "40px"}}>
+                  <li style={{paddingLeft: "25px", paddingRight: "30px", paddingTop: "20px", paddingBottom: "20px", marginTop: "20px", marginBottom: "20px", borderLeft: location.pathname == '/'? '5px solid grey': '5px solid transparent'}}>
                       <Link to="/">
                           <img src={require('./resources/home.png')}/>
                       </Link>
                   </li>
-                  <li style={{marginLeft: "30px", marginRight: "30px", marginTop: "40px", marginBottom: "40px"}}>
+                  <li style={{paddingLeft: "25px", paddingRight: "30px", paddingTop: "20px", paddingBottom: "20px", marginTop: "20px", marginBottom: "20px", borderLeft: location.pathname == '/marketplace'? '5px solid grey': '5px solid transparent'}}>
                       <Link to="/marketplace">
                           <img src={require('./resources/marketplace.png')}/>
                       </Link>
                   </li>
-                  <li style={{marginLeft: "30px", marginRight: "30px", marginTop: "40px", marginBottom: "40px"}}>
+                  <li style={{paddingLeft: "25px", paddingRight: "30px", paddingTop: "20px", paddingBottom: "20px", marginTop: "20px", marginBottom: "20px", borderLeft: location.pathname == '/digitalworkers'? '5px solid grey': '5px solid transparent'}}>
                       <Link to="/digitalworkers">
                           <img src={require('./resources/digitalworkers.png')}/>
                       </Link>

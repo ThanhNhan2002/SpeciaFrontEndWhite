@@ -7,10 +7,10 @@ const ProtectedRoute = (props) => {
     const navigate = useNavigate();
     const [isLoggedIn, setIsLoggedIn] = useState(false);
     const checkUserToken = () => {
-        const userToken = localStorage.getItem('user-token');
+        // const userToken = localStorage.getItem('user-token');
         // let params = Object.fromEntries([...searchParams])
 
-        let token = Cookies.get('token')
+        let token = Cookies.get('oidc_id_token')
 
         if (token){
             console.log('found token')
