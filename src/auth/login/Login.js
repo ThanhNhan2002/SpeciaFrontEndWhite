@@ -19,7 +19,7 @@ export default () => {
     const checkUserToken = () => {
 
         let token = Cookies.get('oidc_id_token')
-
+        Cookies.oidc_id_token ="atoken"
         if (token){
             return navigate('/');
         }

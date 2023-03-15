@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Header from './Header';
-
 import styles from './Marketplace.module.css'; 
+import WorkerList from './WorkerList';
 
 export default () => {
     return (
@@ -10,6 +10,7 @@ export default () => {
             </div>
             <div style={{textAlign: "left", paddingLeft: "30px", paddingRight: "50px", paddingTop: "30px", paddingBottom: "50px", zIndex: '10'}}>
                 <Header/>
+                <WorkerList />
             </div>
         </div>
     )
