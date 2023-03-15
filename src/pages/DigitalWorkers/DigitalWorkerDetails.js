@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import { Link } from 'react-router-dom'
 
@@ -15,15 +15,37 @@ import RuntimeParameterModal from './RuntimeParameterModal';
 import BotExecutingModal from './BotExecutingModal';
 import ResultModal from './ResultModal';
 
+const digitalWorkers = [{id: 1, name: "ATOWP Assistant", price: "12.99", status: 'Owned'},
+                    {id: 2, name: "Digital Assistant 2", price: "18.99", status: 'Owned'},
+                    {id: 3, name: "Digital Assistant 3", price: "29.99", status: 'Hired'},
+                    {id: 4, name: "Digital Assistant 4", price: "25.99", status: 'Owned'},
+                    {id: 5, name: "Digital Assistant 5", price: "37.99", status: 'Hired'},
+                    {id: 6, name: "Digital Assistant 6", price: "15.99", status: 'Owned'},
+                    {id: 7, name: "Digital Assistant 7", price: "8.99", status: 'Hired'},
+                    {id: 8, name: "Digital Assistant 8", price: "8.99", status: 'Hired'},
+                    {id: 9, name: "Digital Assistant 9", price: "8.99", status: 'Owned'},
+                    {id: 10, name: "Digital Assistant 10", price: "8.99", status: 'Owned'},
+                    {id: 11, name: "Digital Assistant 11", price: "8.99", status: 'Hired'},
+                    {id: 12, name: "Digital Assistant 12", price: "8.99", status: 'Owned'},
+                    {id: 13, name: "Digital Assistant 13", price: "8.99", status: 'Hired'},]
+
 export default () => {
 
+
+
     let { digitalWorkerId } = useParams();
+
+    const [digitalWorker, setDigitalWorker] = useState(digitalWorkers[0])
 
     const [runtimeParameterModalShow, setRuntimeParameterModalShow] = useState(false)
 
     const [botExecutingModalShow, setBotExecutingModalShow] = useState(false)
 
     const [resultModalShow, setResultModalShow] = useState(false)
+
+    useEffect(() => {
+        setDigitalWorker(digitalWorkers.find(item => item.id == digitalWorkerId))
+    }, [digitalWorkerId, digitalWorker]);
 
     function openRuntimeParameterModal(){
         setRuntimeParameterModalShow(true)
@@ -37,12 +59,13 @@ export default () => {
         setBotExecutingModalShow(true)
         setTimeout(()=> {
             closeBotExecutingModal()
-        }, 5000)
+        }, 3000)
         
 
     }
     function closeBotExecutingModal(){
         setBotExecutingModalShow(false)
+        openResultModal()
     }
 
 
@@ -62,7 +85,7 @@ export default () => {
                 <div style={{marginTop: '50px', textAlign: 'center'}}>
                     <img src={require('../../resources/atoicon.png')} style={{width: "150px", height: "150px", boxShadow: '0px 0px 10px rgb(100, 100, 100, 0.1)', borderRadius: '10px'}}/>
                     <div style={{paddingTop: '50px', marginBottom: '50px'}}>
-                        <p style={{fontSize: '2rem', fontWeight: '600', marginBottom: '10px'}}>Digital Worker {digitalWorkerId}</p>
+                        <p style={{fontSize: '2rem', fontWeight: '600', marginBottom: '10px'}}>{digitalWorker.name}</p>
                         <p style={{fontSize: '1.1rem', fontWeight: '400', color: 'rgb(150, 150, 150)'}}>Spectar Group</p>
                     </div>
                     <Button onClick={openRuntimeParameterModal} style={{paddingRight: '80px', paddingLeft: '80px'}} variant="secondary">Run</Button>{' '}
@@ -78,7 +101,7 @@ export default () => {
 
             <BotExecutingModal isShow={botExecutingModalShow} onClose={closeBotExecutingModal}/>
 
-            {/* <ResultModal isShow={} /> */}
+            <ResultModal isShow={resultModalShow} onClose={closeResultModal} />
 
 
             

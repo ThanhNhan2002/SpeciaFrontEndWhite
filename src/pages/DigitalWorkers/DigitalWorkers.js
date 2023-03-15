@@ -7,6 +7,7 @@ import styles from './DigitalWorkers.module.css';
 import Header from './Header';
 
 export default () => {
+    window.scrollTo(0, 0)
     return (
         <div style={{position: 'relative'}}>
             <div className={styles.background} style={{height: '60vw', width: '100%', position: 'absolute', zIndex: '-10'}}>

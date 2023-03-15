@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Header from './Header';
 
 import styles from './Home.module.css'; 
+import HomeBody from './HomeBody';
 
 export default () => {
     return (
@@ -10,6 +11,7 @@ export default () => {
             </div>
             <div style={{textAlign: "left", paddingLeft: "30px", paddingRight: "50px", paddingTop: "30px", paddingBottom: "50px", zIndex: '10'}}>
                 <Header/>
+                <HomeBody/>
             </div>
         </div>
     )
