@@ -5,34 +5,34 @@ import React, { Component } from 'react';
 
 export default () => {
 
-    const digitalWorkers = [{id: 1, name: "Digital Worker 1", price: "12.99", status: 'Owned'},
-                            {id: 2, name: "Digital Worker 2", price: "18.99", status: 'Owned'},
-                            {id: 3, name: "Digital Worker 3", price: "29.99", status: 'Hired'},
-                            {id: 4, name: "Digital Worker 4", price: "25.99", status: 'Owned'},
-                            {id: 5, name: "Digital Worker 5", price: "37.99", status: 'Hired'},
-                            {id: 6, name: "Digital Worker 6", price: "15.99", status: 'Owned'},
-                            {id: 7, name: "Digital Worker 7", price: "8.99", status: 'Hired'},
-                            {id: 8, name: "Digital Worker 8", price: "8.99", status: 'Hired'},
-                            {id: 9, name: "Digital Worker 9", price: "8.99", status: 'Owned'},
-                            {id: 10, name: "Digital Worker 10", price: "8.99", status: 'Owned'},
-                            {id: 11, name: "Digital Worker 11", price: "8.99", status: 'Hired'},
-                            {id: 12, name: "Digital Worker 12", price: "8.99", status: 'Owned'},
-                            {id: 13, name: "Digital Worker 13", price: "8.99", status: 'Hired'},]
+    const digitalWorkers = [{id: 1, name: "ATOWP Assistant", price: "12.99", status: 'Owned'},
+                            {id: 2, name: "Digital Assistant 2", price: "18.99", status: 'Owned'},
+                            {id: 3, name: "Digital Assistant 3", price: "29.99", status: 'Hired'},
+                            {id: 4, name: "Digital Assistant 4", price: "25.99", status: 'Owned'},
+                            {id: 5, name: "Digital Assistant 5", price: "37.99", status: 'Hired'},
+                            {id: 6, name: "Digital Assistant 6", price: "15.99", status: 'Owned'},
+                            {id: 7, name: "Digital Assistant 7", price: "8.99", status: 'Hired'},
+                            {id: 8, name: "Digital Assistant 8", price: "8.99", status: 'Hired'},
+                            {id: 9, name: "Digital Assistant 9", price: "8.99", status: 'Owned'},
+                            {id: 10, name: "Digital Assistant 10", price: "8.99", status: 'Owned'},
+                            {id: 11, name: "Digital Assistant 11", price: "8.99", status: 'Hired'},
+                            {id: 12, name: "Digital Assistant 12", price: "8.99", status: 'Owned'},
+                            {id: 13, name: "Digital Assistant 13", price: "8.99", status: 'Hired'},]
 
-    const ownedDigitalWorkers = [{id: 1, name: "Digital Worker 1", price: "12.99", status: 'Owned'},
-                            {id: 2, name: "Digital Worker 2", price: "18.99", status: 'Owned'},
-                            {id: 4, name: "Digital Worker 4", price: "25.99", status: 'Owned'},
-                            {id: 6, name: "Digital Worker 6", price: "15.99", status: 'Owned'},
-                            {id: 9, name: "Digital Worker 9", price: "8.99", status: 'Owned'},
-                            {id: 10, name: "Digital Worker 10", price: "8.99", status: 'Owned'},
-                            {id: 12, name: "Digital Worker 12", price: "8.99", status: 'Owned'}]        
+    const ownedDigitalWorkers = [{id: 1, name: "ATOWP Assistant", price: "12.99", status: 'Owned'},
+                            {id: 2, name: "Digital Assistant 2", price: "18.99", status: 'Owned'},
+                            {id: 4, name: "Digital Assistant 4", price: "25.99", status: 'Owned'},
+                            {id: 6, name: "Digital Assistant 6", price: "15.99", status: 'Owned'},
+                            {id: 9, name: "Digital Assistant 9", price: "8.99", status: 'Owned'},
+                            {id: 10, name: "Digital Assistant 10", price: "8.99", status: 'Owned'},
+                            {id: 12, name: "Digital Assistant 12", price: "8.99", status: 'Owned'}]        
 
-    const hiredDigitalWorkers = [{id: 3, name: "Digital Worker 3", price: "29.99", status: 'Hired'},
-                                {id: 5, name: "Digital Worker 5", price: "37.99", status: 'Hired'},
-                                {id: 7, name: "Digital Worker 7", price: "8.99", status: 'Hired'},
-                                {id: 8, name: "Digital Worker 8", price: "8.99", status: 'Hired'},
-                                {id: 11, name: "Digital Worker 11", price: "8.99", status: 'Hired'},
-                                {id: 13, name: "Digital Worker 13", price: "8.99", status: 'Hired'},]
+    const hiredDigitalWorkers = [{id: 3, name: "Digital Assistant 3", price: "29.99", status: 'Hired'},
+                                {id: 5, name: "Digital Assistant 5", price: "37.99", status: 'Hired'},
+                                {id: 7, name: "Digital Assistant 7", price: "8.99", status: 'Hired'},
+                                {id: 8, name: "Digital Assistant 8", price: "8.99", status: 'Hired'},
+                                {id: 11, name: "Digital Assistant 11", price: "8.99", status: 'Hired'},
+                                {id: 13, name: "Digital Assistant 13", price: "8.99", status: 'Hired'},]
 
     return (
         <div>
@@ -49,7 +49,7 @@ export default () => {
                                         <p style={{fontSize: '1.2rem'}}>{digitalWorker.name}</p>
                                         <p style={{fontSize: '1rem', fontWeight: '200'}}>by Spectar Group</p>
                                     </div>
-                                    <div style={{flex: 1, padding: '20px'}}>
+                                    <div style={{padding: '20px'}}>
                                         <div style={{textAlign: 'right'}}>
                                             <span style={{fontSize: "0.9rem", fontWeight: '600', color: "rgb(100, 100, 100)", backgroundColor: 'rgb(245, 245, 245)', padding: '5px', borderRadius: '4px'}}>{digitalWorker.status}</span>
                                         </div>
@@ -74,7 +74,7 @@ export default () => {
                                         <p style={{fontSize: '1.2rem'}}>{digitalWorker.name}</p>
                                         <p style={{fontSize: '1rem', fontWeight: '200'}}>by Spectar Group</p>
                                     </div>
-                                    <div style={{flex: 1, padding: '20px'}}>
+                                    <div style={{padding: '20px'}}>
                                         <div style={{textAlign: 'right'}}>
                                             <span style={{fontSize: "0.9rem", fontWeight: '600', color: "rgb(100, 100, 100)", backgroundColor: 'rgb(245, 245, 245)', padding: '5px', borderRadius: '4px'}}>{digitalWorker.status}</span>
                                         </div>
@@ -99,7 +99,7 @@ export default () => {
                                         <p style={{fontSize: '1.2rem'}}>{digitalWorker.name}</p>
                                         <p style={{fontSize: '1rem', fontWeight: '200'}}>by Spectar Group</p>
                                     </div>
-                                    <div style={{flex: 1, padding: '20px'}}>
+                                    <div style={{padding: '20px'}}>
                                         <div style={{textAlign: 'right'}}>
                                             <span style={{fontSize: "0.9rem", fontWeight: '600', color: "rgb(100, 100, 100)", backgroundColor: 'rgb(245, 245, 245)', padding: '5px', borderRadius: '4px'}}>{digitalWorker.status}</span>
                                         </div>
