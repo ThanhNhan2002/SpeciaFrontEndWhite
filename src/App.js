@@ -7,6 +7,7 @@ import Marketplace from './pages/Marketplace/Marketplace';
 import DigitalWorkers from './pages/DigitalWorkers/DigitalWorkers';
 import Layout from './Layout';
 import DigitalWorkerDetails from './pages/DigitalWorkers/DigitalWorkerDetails';
+import WorkerDetails from './pages/Marketplace/WorkerDetails';
 
 import { TransitionGroup, CSSTransition } from "react-transition-group";
 import Login from './auth/login/Login';
@@ -25,6 +26,7 @@ function App() {
               <Route path="/" element={<ProtectedRoute><Layout/></ProtectedRoute>}>
                 <Route index element={<Home/>}></Route>
                 <Route path='/marketplace' element={<Marketplace/>}></Route>
+                <Route path='/marketplace/:digitalWorkerId' element={<WorkerDetails/>}></Route>
                 <Route path='/digitalworkers' element={<DigitalWorkers/>} exact></Route>
                 <Route path='/digitalworkers/:digitalWorkerId' element={<DigitalWorkerDetails/>}></Route>
               </Route>
