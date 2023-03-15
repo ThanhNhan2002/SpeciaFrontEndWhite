@@ -25,7 +25,8 @@ function WorkerList () {
                     <div className="row">
                         {digitalWorkers.map(digitalWorker => (
                         <div key={digitalWorker.id} id="cardItem" className="col-sm-3" style={{paddingTop: '12px', paddingBottom: '12px'}}>
-                            <Link to={``} style={{textDecoration: 'none', color: 'black'}}>
+                            {/* `/digitalworkers/${digitalWorker.id}` */}
+                            <Link to={`/marketplace/${digitalWorker.id}`} style={{textDecoration: 'none', color: 'black'}}>
                                 <div style={{ width: "100%", height: '400px', display: 'flex', flexDirection: "column", backgroundColor: "white", border: '1px solid rgb(230, 230, 230)', boxShadow: '0px 0px 10px rgb(100, 100, 100, 0.05)', borderRadius: '13px', overflow: 'hidden'}}>
                                     <img class ='rounded-circle' src={require('../../resources/atoicon.png')} style={{width: "210px", height: "210px", alignSelf: "center", marginTop: "15px"}}/>
                                     <div style={{flex: 1, padding: '20px', paddingBottom: "25px"}}>
