@@ -1,4 +1,5 @@
 import Alert from 'react-bootstrap/Alert';
+import React, { Component } from 'react';
 
 export default () => {
     return (
