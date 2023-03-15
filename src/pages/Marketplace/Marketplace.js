@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Header from './Header';
-import WorkerCard from './WorkerCard';
 import styles from './Marketplace.module.css'; 
 import WorkerList from './WorkerList';
 
@@ -16,28 +15,3 @@ export default () => {
         </div>
     )
 }
-
-
-// function WorkerList() {
-//     return (
- 
-
-    // <div class="container">
-    //     <div class="row row-cols-3">
-    //       <div class="col"><WorkerCard /></div>
-    //       <div class="col"><WorkerCard /></div>
-    //       <div class="col"><WorkerCard /></div>
-          
-    //     </div>
-
-    //     <div class="row row-cols-3" style={{margin: '18rem'}}>
-    //         <div class="col"><WorkerCard /></div>
-    //     </div>
-
-    //   </div>
-          
-        
-//     )
-// }
-
-// export default WorkerList;

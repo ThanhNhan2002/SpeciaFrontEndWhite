@@ -26,38 +26,19 @@ function WorkerList () {
                         {digitalWorkers.map(digitalWorker => (
                         <div key={digitalWorker.id} id="cardItem" className="col-sm-3" style={{paddingTop: '12px', paddingBottom: '12px'}}>
                             <Link to={`/digitalworkers/${digitalWorker.id}`} style={{textDecoration: 'none', color: 'black'}}>
-
                                 <div style={{ width: "100%", height: '400px', display: 'flex', flexDirection: "column", backgroundColor: "white", border: '1px solid rgb(230, 230, 230)', boxShadow: '0px 0px 10px rgb(100, 100, 100, 0.05)', borderRadius: '13px', overflow: 'hidden'}}>
-                                    
                                     <img class ='rounded-circle' src={require('../../resources/atoicon.png')} style={{width: "210px", height: "210px", alignSelf: "center", marginTop: "15px"}}/>
-                                    
                                     <div style={{flex: 1, padding: '20px', paddingBottom: "25px"}}>
                                         <p style={{fontSize: '1.5rem', fontWeight: '500'}}>{digitalWorker.name}</p>
-                                        
                                     </div>
-
-                                    <div style={{ display:'flex', padding: '20px', flexDirection: "row", justifyContent: 'space-between'}}>
+                                    <div style={{ display:'flex', padding: '20px', flexDirection: "row", justifyContent: 'space-between', alignItem: 'center' }}>
                                       <div>
-                                        <p style={{fontSize: '1.1rem'}}>by Spectar Group</p>
+                                        <p style={{fontSize: '1.2rem', fontWeight:'300'}}>by Spectar Group</p>
                                       </div>
                                       <div>
                                         <span style={{fontSize: "1rem", fontWeight: '600', color: "rgb(100, 100, 100)", backgroundColor: 'rgb(245, 245, 245)', padding: '5px', borderRadius: '4px'}}>$15.99</span>
                                       </div>
                                     </div>
-
-
-
-                                    {/* <div style={{paddingLeft: '20px'}}>
-                                      <p style={{fontSize: '1rem', fontWeight: '200'}}>$15.99</p>
-                                    </div> */}
-
-                                    {/* Status of digital worker */}
-                                    {/* <div style={{flex: 1, padding: '20px'}}>
-                                        <div style={{textAlign: 'right'}}>
-                                            <span style={{fontSize: "0.9rem", fontWeight: '600', color: "rgb(100, 100, 100)", backgroundColor: 'rgb(245, 245, 245)', padding: '5px', borderRadius: '4px'}}>$15.99</span>
-                                        </div>
-                                    </div> */}
-
                                 </div>
                             </Link>
                         </div>
