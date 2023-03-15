@@ -25,7 +25,7 @@ function WorkerList () {
                     <div className="row">
                         {digitalWorkers.map(digitalWorker => (
                         <div key={digitalWorker.id} id="cardItem" className="col-sm-3" style={{paddingTop: '12px', paddingBottom: '12px'}}>
-                            <Link to={`/digitalworkers/${digitalWorker.id}`} style={{textDecoration: 'none', color: 'black'}}>
+                            <Link to={``} style={{textDecoration: 'none', color: 'black'}}>
                                 <div style={{ width: "100%", height: '400px', display: 'flex', flexDirection: "column", backgroundColor: "white", border: '1px solid rgb(230, 230, 230)', boxShadow: '0px 0px 10px rgb(100, 100, 100, 0.05)', borderRadius: '13px', overflow: 'hidden'}}>
                                     <img class ='rounded-circle' src={require('../../resources/atoicon.png')} style={{width: "210px", height: "210px", alignSelf: "center", marginTop: "15px"}}/>
                                     <div style={{flex: 1, padding: '20px', paddingBottom: "25px"}}>
@@ -36,7 +36,7 @@ function WorkerList () {
                                         <p style={{fontSize: '1.2rem', fontWeight:'300'}}>by Spectar Group</p>
                                       </div>
                                       <div>
-                                        <span style={{fontSize: "1rem", fontWeight: '600', color: "rgb(100, 100, 100)", backgroundColor: 'rgb(245, 245, 245)', padding: '5px', borderRadius: '4px'}}>$15.99</span>
+                                        <span style={{fontSize: "1rem", fontWeight: '600', color: "rgb(100, 100, 100)", backgroundColor: 'rgb(245, 245, 245)', padding: '5px', borderRadius: '4px'}}>${digitalWorker.price}</span>
                                       </div>
                                     </div>
                                 </div>
