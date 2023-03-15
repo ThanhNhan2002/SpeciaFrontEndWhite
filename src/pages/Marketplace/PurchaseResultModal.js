@@ -1,12 +1,7 @@
 import Modal from 'react-bootstrap/Modal';
-
-import Form from 'react-bootstrap/Form';
-
 import Button from 'react-bootstrap/Button';
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
-import ReactDOM from 'react-dom'
-import CheckIcon from './CheckIcon';
 import checkIcon from '../../resources/checkIcon.svg'
 
 
