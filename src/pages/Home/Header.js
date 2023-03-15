@@ -1,4 +1,5 @@
 import Form from 'react-bootstrap/Form';
+import React, { Component } from 'react';
 
 export default () => {
     return (

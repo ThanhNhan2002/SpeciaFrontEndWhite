@@ -1,5 +1,5 @@
 import Form from 'react-bootstrap/Form';
-
+import React, { Component } from 'react';
 import Button from 'react-bootstrap/Button';
  
  export default () => {

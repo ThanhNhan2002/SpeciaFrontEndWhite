@@ -1,6 +1,7 @@
 import Modal from 'react-bootstrap/Modal';
 
 import Button from 'react-bootstrap/Button';
+import React, { Component } from 'react';
 
 import Spinner from 'react-bootstrap/Spinner';
 
