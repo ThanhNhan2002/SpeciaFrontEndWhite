@@ -1,10 +1,7 @@
-
-import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import React, { useState, Component } from 'react';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-
 
 export default () => {
     const newReleasedDigitalWorkers = [
@@ -69,7 +66,6 @@ export default () => {
                                 </Link>
                             </Col>
                         ))}
-
                     </Row>
                 </div>
             </div>

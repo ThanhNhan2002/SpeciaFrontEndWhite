@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 import Button from 'react-bootstrap/Button';
 import { useParams } from 'react-router-dom';
 import Description from '../DigitalWorkers/Description';
-import InitialParameters from './InitialParameters';
 import Capabilities from './Capabilities';
 import PurchaseResultModal from './PurchaseResultModal';
 
