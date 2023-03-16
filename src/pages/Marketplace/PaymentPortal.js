@@ -40,7 +40,7 @@ export default function PaymentPortal() {
             
             padding: '30px 50px 30px 50px',
             marginTop: '80px', 
-            marginRight: '8vw',
+            marginRight: '7.2vw',
             marginBottom: '80px', 
             marginLeft: '10px', 
             width: '80rem', 
