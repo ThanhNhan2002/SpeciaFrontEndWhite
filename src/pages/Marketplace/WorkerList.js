@@ -1,4 +1,5 @@
 
+import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import React, { useState, Component } from 'react';
 import Row from 'react-bootstrap/Row';
@@ -6,8 +7,6 @@ import Col from 'react-bootstrap/Col';
 
 
 export default () => {
-
-
     const newReleasedDigitalWorkers = [
                             {id: 6, name: "Digital Assistant 6", price: "15.99", status: 'Owned'},
                             {id: 9, name: "Digital Assistant 9", price: "24.99", status: 'Owned'},
@@ -138,7 +137,6 @@ export default () => {
                     </Row>
                 </div>
             </div>
-            
         </div>
     )
 }

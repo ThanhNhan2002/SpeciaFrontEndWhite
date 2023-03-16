@@ -1,7 +1,12 @@
-import { Outlet, Link, useLocation } from "react-router-dom";
+import { Outlet, Link, useLocation, useOutlet } from "react-router-dom";
 import React, { Component } from 'react';
 
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
+import { CSSTransition, TransitionGroup } from 'react-transition-group'
+
+
+
 import Cookies from 'js-cookie';
 
 const Layout = () => {
@@ -11,11 +16,14 @@ const Layout = () => {
   const location = useLocation()
 
 
+
+
   function logout(){
     console.log('log out')
     Cookies.remove('oidc_id_token')
     return navigate('/auth/login')
   }
+
 
   return (
     <>
@@ -57,7 +65,11 @@ const Layout = () => {
             </div>
           </div>
           <div style={{flex: 1, overflowY: 'auto'}}>
-              <Outlet />
+            <TransitionGroup component={null} exit={false}>
+              <CSSTransition key={location.key} timeout={300} classNames="fade" >
+                  <Outlet/>
+              </CSSTransition>
+            </TransitionGroup>
           </div>
         </div>
       </div>

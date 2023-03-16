@@ -19,6 +19,7 @@ export default function InitialParameters() {
             marginTop: '80px', 
             marginBottom: '80px', 
             marginLeft: '10px', 
+            marginRight: '7.2vw',
             width: '80rem', 
           }}
       >

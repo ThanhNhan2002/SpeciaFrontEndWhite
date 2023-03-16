@@ -23,7 +23,7 @@ export default (props) => {
                             </Spinner>
                         </div>
                         <div style={{textAlign: 'center'}}>
-                            <Button style={{paddingLeft: '20px', paddingRight: '20px'}} variant="secondary" onClick={props.onRun}>
+                            <Button style={{paddingLeft: '20px', paddingRight: '20px'}} variant="secondary" onClick={props.onTerminate}>
                                 Terminate
                             </Button>
                         </div>

@@ -1,11 +1,34 @@
-import React, { Component }  from 'react';
+import React, { Component, useState }  from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom'
 import { useParams } from 'react-router-dom';
+import PurchaseResultModal from './PurchaseResultModal';
+import ExecutingModal from './ExecutingModal';
 
 export default function PaymentPortal() {
   let { digitalWorkerId } = useParams();
+
+  const [paymentResult, setPaymentResult] = useState(false);
+  const [isExecuting, setExecuting] = useState(false);
+  const [executingTimer, setExecutingTimer] = useState(' ');
+
+
+  function executing() {
+    setExecuting(true);
+    setExecutingTimer(setTimeout( executingSucceeded, 1000));
+  }
+
+  function executingSucceeded() {
+    stopExecuting();
+    setPaymentResult(true);
+  }
+  
+  function stopExecuting () {
+    clearTimeout(executingTimer);
+    setExecuting(false);
+    setPaymentResult(false);
+  }
 
   return (
     <div style={{display:'flex', justifyContent:'center'}}>
@@ -17,6 +40,7 @@ export default function PaymentPortal() {
             
             padding: '30px 50px 30px 50px',
             marginTop: '80px', 
+            marginRight: '7.2vw',
             marginBottom: '80px', 
             marginLeft: '10px', 
             width: '80rem', 
@@ -81,14 +105,17 @@ export default function PaymentPortal() {
                   </div>
               </div>
             </div>
-
             <div style={{textAlign: 'right', marginTop: '30px'}}>
-              <Link to= {`#`}>
-                  <Button style={{paddingRight: '15px', paddingLeft: '15px', width: '200px', height:'50px'}} variant="secondary">Pay</Button>
-              </Link>
+                <Button onClick={executing} style={{paddingRight: '15px', paddingLeft: '15px', width: '200px', height:'50px'}} variant="secondary">Pay</Button>
             </div>
         </div>
       </div>
+
+      <ExecutingModal isShow={isExecuting} onHide={stopExecuting}>
+      </ExecutingModal>
+
+      <PurchaseResultModal isShow={paymentResult}>
+      </PurchaseResultModal>
     </div>
   )
 }
