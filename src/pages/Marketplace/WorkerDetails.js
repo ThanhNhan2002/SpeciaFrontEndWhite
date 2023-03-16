@@ -23,9 +23,18 @@ export default() =>  {
     return (
         <div style={{ display: 'flex', textAlign: "left", height: '100%', color: 'rgb(70, 70, 70)'}}>
             <div style={{ flex: 1, backgroundColor: 'white', marginRight: '10px', boxShadow: '0px 0px 10px rgb(100, 100, 100, 0.1)', borderRadius: '12px', border: '1px solid rgb(230, 230, 230)', marginTop: "20px", marginBottom: '20px'}}>                
-                <Link to="/marketplace/" style={{textDecoration: 'none', color: 'black'}}>
-                    <button className='btn-close' style={{"fontSize": '1.2rem', marginTop: '20px', marginLeft: '20px'}}></button>
-                </Link>
+                <div style={{ margin: '20px 25px 45px 30px', flex:'1'}}>
+                        <div style={{display:'flex', justifyContent: 'flex-start'}}>
+                            <Link to={`/marketplace`} style={{textDecoration: 'none', color: 'white'}}>
+                                <div>
+                                    <img style={{ marginTop:'16px', width:'15px', height: '15px', opacity:'0.7'}} src={require('../../resources/leftAngleBracket.png')}/>
+                                </div>
+                                <div>
+                                    <button style={{border:'0px', backgroundColor:'white', fontSize: '1.3rem', opacity:'0.7', marginTop: '6px', marginLeft: '0px'}}>Back</button>
+                                </div>
+                            </Link>
+                        </div>
+                </div>
                 <div style={{marginTop: '50px', textAlign: 'center'}}>
                     <img src={require('../../resources/atoicon.png')} style={{width: "150px", height: "150px", boxShadow: '0px 0px 10px rgb(100, 100, 100, 0.1)', borderRadius: '10px'}}/>
                     <div style={{paddingTop: '50px', marginBottom: '50px'}}>

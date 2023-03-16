@@ -9,7 +9,6 @@ import Layout from './Layout';
 import DigitalWorkerDetails from './pages/DigitalWorkers/DigitalWorkerDetails';
 import WorkerDetails from './pages/Marketplace/WorkerDetails';
 
-import { TransitionGroup, CSSTransition } from "react-transition-group";
 import Login from './auth/login/Login';
 import ProtectedRoute from './auth/ProtectedRoute';
 import Registration from './auth/registration/Registration';
@@ -19,6 +18,8 @@ import PaymentPortal from './pages/Marketplace/PaymentPortal';
 
 
 function App() {
+
+  const location = useLocation()
 
 
   return (
