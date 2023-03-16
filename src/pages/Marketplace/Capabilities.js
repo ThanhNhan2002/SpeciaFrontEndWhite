@@ -14,10 +14,10 @@ export default () => {
                 <Alert variant='success'>
                     This is an alert—check it out!
                 </Alert>
-                <Alert variant='danger'>
+                <Alert variant='success'>
                     This is an alert—check it out!
                 </Alert>
-                <Alert variant='danger'>
+                <Alert variant='success'>
                     This is an alert—check it out!
                 </Alert>
                 <Alert variant='success'>
