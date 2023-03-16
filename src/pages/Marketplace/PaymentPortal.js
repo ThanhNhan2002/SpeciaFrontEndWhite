@@ -105,12 +105,8 @@ export default function PaymentPortal() {
                   </div>
               </div>
             </div>
-
             <div style={{textAlign: 'right', marginTop: '30px'}}>
-              
-                {/* <Button onClick={() => setPaymentResult(true)} style={{paddingRight: '15px', paddingLeft: '15px', width: '200px', height:'50px'}} variant="secondary">Pay</Button> */}
                 <Button onClick={executing} style={{paddingRight: '15px', paddingLeft: '15px', width: '200px', height:'50px'}} variant="secondary">Pay</Button>
-              
             </div>
         </div>
       </div>

@@ -24,14 +24,6 @@ export default () => {
                     <div style ={{fontSize:'15px'}}>&#9679;</div>
                     <div style={{marginLeft:'8px'}}>This is an alert—check it out! </div>
                 </div>
-
-
-
-                {/* <p> &#9679; This is an alert—check it out! </p>
-                <p> &#9679; This is an alert—check it out! </p>
-                <p> &#9679; This is an alert—check it out! </p>
-                <p> &#9679; This is an alert—check it out! </p>
-                <p> &#9679; This is an alert—check it out! </p> */}
                 <div style={{textAlign: 'right'}}>
                     <p>See all</p>
                 </div>
