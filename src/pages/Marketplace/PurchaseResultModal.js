@@ -9,8 +9,8 @@ export default function PurchaseResultModal (props) {
     return (
         <>
             <Modal show={props.isShow} onHide={props.onClose} className='modal-dialog-zoom' centered backdrop="static">
-                <Modal.Header closeButton>
-                  <Modal.Title>Runtime Parameters</Modal.Title>
+                <Modal.Header>
+                  <Modal.Title>Result</Modal.Title>
                 </Modal.Header>
                 <Modal.Body>
                     <div style={{display: 'flex', flexDirection:'column', alignItems: 'center', paddingLeft: '20px', paddingRight: '20px', paddingBottom: '20px'}}>
