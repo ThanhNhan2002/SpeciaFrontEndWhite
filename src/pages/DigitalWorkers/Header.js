@@ -5,8 +5,8 @@ import ReactDOM from 'react-dom'
 
 export default () => {
     return (
-        <div style={{display: "flex", flexDirection: "row"}}>
-            <div style={{flex: 1, marginTop: '200px', marginBottom: '200px', paddingRight: '50px', paddingLeft: '30px',}}>
+        <div style={{display: "flex", flexDirection: "row", height: '550px'}}>
+            <div style={{flex: 1, marginTop: 'auto', marginBottom: 'auto', paddingRight: '50px', paddingLeft: '30px',}}>
                 <p style={{fontSize: '2.7rem', color: 'black', fontWeight: '200', letterSpacing: '10px'}}>MY DIGITAL ASSISTANTS</p>
             </div>
             <div style={{flex: 1, paddingTop: '15px', paddingBottom: '15px', paddingLeft: '20vw'}}>

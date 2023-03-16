@@ -39,12 +39,12 @@ const Layout = () => {
                           <img src={require('./resources/home.png')}/>
                       </Link>
                   </li>
-                  <li style={{paddingLeft: "25px", paddingRight: "30px", paddingTop: "20px", paddingBottom: "20px", marginTop: "20px", marginBottom: "20px", borderLeft: location.pathname == '/marketplace'? '5px solid grey': '5px solid transparent'}}>
+                  <li style={{paddingLeft: "25px", paddingRight: "30px", paddingTop: "20px", paddingBottom: "20px", marginTop: "20px", marginBottom: "20px", borderLeft: location.pathname.includes('marketplace')? '5px solid grey': '5px solid transparent'}}>
                       <Link to="/marketplace">
                           <img src={require('./resources/marketplace.png')}/>
                       </Link>
                   </li>
-                  <li style={{paddingLeft: "25px", paddingRight: "30px", paddingTop: "20px", paddingBottom: "20px", marginTop: "20px", marginBottom: "20px", borderLeft: location.pathname == '/digitalworkers'? '5px solid grey': '5px solid transparent'}}>
+                  <li style={{paddingLeft: "25px", paddingRight: "30px", paddingTop: "20px", paddingBottom: "20px", marginTop: "20px", marginBottom: "20px", borderLeft: location.pathname.includes('digitalworkers')? '5px solid grey': '5px solid transparent'}}>
                       <Link to="/digitalworkers">
                           <img src={require('./resources/digitalworkers.png')}/>
                       </Link>
