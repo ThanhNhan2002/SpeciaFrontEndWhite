@@ -14,6 +14,7 @@ import Login from './auth/login/Login';
 import ProtectedRoute from './auth/ProtectedRoute';
 import Registration from './auth/registration/Registration';
 import InitialParameters from './pages/Marketplace/InitialParameters';
+import PaymentPortal from './pages/Marketplace/PaymentPortal';
 
 
 
@@ -29,8 +30,10 @@ function App() {
                 <Route path='/marketplace' element={<Marketplace/>}></Route>
                 <Route path='/marketplace/:digitalWorkerId' element={<WorkerDetails/>}></Route>
                 <Route path='/marketplace/:digitalWorkerId/initialparameters' element={<InitialParameters/>}></Route>
+                <Route path='/marketplace/:digitalWorkerId/paymentportal'  element={<PaymentPortal/>}></Route>
                 <Route path='/digitalworkers' element={<DigitalWorkers/>} exact></Route>
                 <Route path='/digitalworkers/:digitalWorkerId' element={<DigitalWorkerDetails/>}></Route>
+                
               </Route>
             </Routes>
   );
