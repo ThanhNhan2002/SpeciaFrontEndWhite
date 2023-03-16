@@ -11,10 +11,12 @@ export default function PaymentPortal() {
 
   const [paymentResult, setPaymentResult] = useState(false);
   const [isExecuting, setExecuting] = useState(false);
+  const [executingTimer, setExecutingTimer] = useState(' ');
+
 
   function executing() {
     setExecuting(true);
-    setTimeout( executingSucceeded, 3000);
+    setExecutingTimer(setTimeout( executingSucceeded, 1000));
   }
 
   function executingSucceeded() {
@@ -23,6 +25,7 @@ export default function PaymentPortal() {
   }
   
   function stopExecuting () {
+    clearTimeout(executingTimer);
     setExecuting(false);
     setPaymentResult(false);
   }

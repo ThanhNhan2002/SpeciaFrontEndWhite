@@ -10,7 +10,8 @@ import PurchaseResultModal from './PurchaseResultModal';
 
 export default() =>  {
     let { digitalWorkerId } = useParams();
-    const [purchaseResult, setPurchaseResult] = useState(false)
+    const [purchaseResult, setPurchaseResult] = useState(false);
+    const [executingTimer, setExecutingTimer] = useState('');
 
     function openPurchaseResult(){
         setPurchaseResult(true)
