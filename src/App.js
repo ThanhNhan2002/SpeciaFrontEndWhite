@@ -13,6 +13,7 @@ import { TransitionGroup, CSSTransition } from "react-transition-group";
 import Login from './auth/login/Login';
 import ProtectedRoute from './auth/ProtectedRoute';
 import Registration from './auth/registration/Registration';
+import InitialParameters from './pages/Marketplace/InitialParameters';
 
 
 
@@ -27,6 +28,7 @@ function App() {
                 <Route index element={<Home/>}></Route>
                 <Route path='/marketplace' element={<Marketplace/>}></Route>
                 <Route path='/marketplace/:digitalWorkerId' element={<WorkerDetails/>}></Route>
+                <Route path='/marketplace/:digitalWorkerId/initialparameters' element={<InitialParameters/>}></Route>
                 <Route path='/digitalworkers' element={<DigitalWorkers/>} exact></Route>
                 <Route path='/digitalworkers/:digitalWorkerId' element={<DigitalWorkerDetails/>}></Route>
               </Route>

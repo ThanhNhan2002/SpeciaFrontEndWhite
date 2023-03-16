@@ -1,7 +1,6 @@
 import Form from 'react-bootstrap/Form';
 import React, { Component }  from 'react';
 
-
 export default () => {
     return (
         <div style={{display: "flex", flexDirection: "row"}}>
