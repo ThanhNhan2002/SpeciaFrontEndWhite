@@ -1,11 +1,20 @@
-import React, { Component }  from 'react';
+import React, { Component, useState }  from 'react';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom'
 import { useParams } from 'react-router-dom';
+import PurchaseResultModal from './PurchaseResultModal';
+import ExecutingModal from './ExecutingModal';
 
 export default function PaymentPortal() {
   let { digitalWorkerId } = useParams();
+
+  const [paymentResult, setPaymentResult] = useState(false);
+  const [isExecuting, setExecuting] = useState(false);
+  
+  function closeExecuting () {
+    setExecuting(false);
+  }
 
   return (
     <div style={{display:'flex', justifyContent:'center'}}>
@@ -84,12 +93,19 @@ export default function PaymentPortal() {
             </div>
 
             <div style={{textAlign: 'right', marginTop: '30px'}}>
-              <Link to= {`#`}>
-                  <Button style={{paddingRight: '15px', paddingLeft: '15px', width: '200px', height:'50px'}} variant="secondary">Pay</Button>
-              </Link>
+              
+                {/* <Button onClick={() => setPaymentResult(true)} style={{paddingRight: '15px', paddingLeft: '15px', width: '200px', height:'50px'}} variant="secondary">Pay</Button> */}
+                <Button onClick={() => setExecuting(true)} style={{paddingRight: '15px', paddingLeft: '15px', width: '200px', height:'50px'}} variant="secondary">Pay</Button>
+              
             </div>
         </div>
       </div>
+
+      <PurchaseResultModal isShow={paymentResult}>
+      </PurchaseResultModal>
+
+      <ExecutingModal isShow={isExecuting} onHide={closeExecuting}>
+      </ExecutingModal>
     </div>
   )
 }
