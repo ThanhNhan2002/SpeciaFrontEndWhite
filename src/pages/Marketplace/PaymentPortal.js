@@ -8,7 +8,6 @@ export default function PaymentPortal() {
   let { digitalWorkerId } = useParams();
 
   return (
-    
     <div style={{display:'flex', justifyContent:'center'}}>
       <div style={{
             backgroundColor: 'white', 
@@ -23,10 +22,6 @@ export default function PaymentPortal() {
             width: '80rem', 
           }}
       >
-
-        {/* <div>
-            <p style={{fontSize: '1.2rem', paddingTop: '15px', paddingBottom: '15px', paddingLeft: '30px', borderBottom: '1px solid rgb(230, 230, 230)', fontWeight: '600'}}>Initial Parameters</p>
-        </div> */}
         <div style={{ margin: '15px 25px 45px 38px', flex:'1'}}>
           <Link to={`/marketplace/${digitalWorkerId}/InitialParameters`} style={{textDecoration: 'none', color: 'white'}}>
               <div style={{display:'flex', justifyContent: 'flex-start'}}>
@@ -41,8 +36,6 @@ export default function PaymentPortal() {
         </div>
 
         <div id="cardItem">
-
-
               <div style={{ width: "100%", display: 'flex', flexDirection: "row", justifyContent:'flex-start', backgroundColor: "white", borderRadius: '10px', overflow: 'hidden', margin:'0px 0px 0px 0px'}}>
                   <div style={{ padding:'5px 0 5px 27px'}}>
                     <img src={require('../../resources/atoicon.png')} style={{width: "250px", height: "250px", boxShadow: '0px 0px 10px rgb(100, 100, 100, 0.1)', borderRadius: '10px'}}/>
@@ -58,20 +51,6 @@ export default function PaymentPortal() {
                           <span style={{fontSize: "0.9rem", fontWeight: '600', color: "rgb(100, 100, 100)", backgroundColor: 'rgb(245, 245, 245)', padding: '5px', borderRadius: '4px'}}>$19.99</span>
                       </div>
                   </div>
-                  
-                    {/* <div style={{ margin: '24px 25px 0px 0px', flex:'1'}}>
-                      <Link to={`/marketplace/${digitalWorkerId}/InitialParameters`} style={{textDecoration: 'none', color: 'white'}}>
-                          <div style={{display:'flex', justifyContent: 'flex-end'}}>
-                              <div>
-                                <img style={{ marginTop:'16px', width:'15px', height: '15px', opacity:'0.7'}} src={require('../../resources/leftAngleBracket.png')}/>
-                              </div>
-                              <div>
-                                <button style={{border:'0px', backgroundColor:'white', fontSize: '1.3rem', opacity:'0.7', marginTop: '6px', marginLeft: '0px'}}>Back</button>
-                              </div>
-                          </div>
-                      </Link>
-                    </div> */}
-                  
               </div>
         </div>
 
@@ -80,31 +59,25 @@ export default function PaymentPortal() {
                 <Form.Label style={{paddingBottom: '5px', fontWeight: '500', paddingLeft: '5px'}}>Name on card</Form.Label>
                 <div style={{display: 'flex', flexDirection: 'row'}}>
                     <Form.Control style={{flex: 1, height:'50px'}} type="text" placeholder="" />
-                    {/* <i style={{fontSize: '1.5rem', color: 'green', marginTop: '10px', marginBottom: '20px', marginLeft: '20px'}} class="fa-regular fa-pen-to-square"></i> */}
                 </div>
             </div>
-
             <div style={{paddingBottom: '30px'}}>
                 <Form.Label style={{paddingBottom: '5px', fontWeight: '500', paddingLeft: '5px'}}>Creadit Card Number</Form.Label>
                 <div style={{display: 'flex', flexDirection: 'row'}}>
                     <Form.Control style={{flex: 1, height:'50px'}} type="text" placeholder="" value="Some Value" />
-                    {/* <i style={{fontSize: '1.5rem', color: 'green', marginTop: '10px', marginBottom: '20px', marginLeft: '20px'}} class="fa-regular fa-pen-to-square"></i> */}
                 </div>
             </div>
-
             <div style={{ display: 'flex', justifyContent: 'space-between'}}>
               <div style={{ paddingBottom: '30px', width: '48%'}}>
                   <Form.Label style={{paddingBottom: '5px', fontWeight: '500', paddingLeft: '5px'}}>Expiring </Form.Label>
                   <div style={{display: 'flex', flexDirection: 'row'}}>
                       <Form.Control style={{flex: 1, height:'50px'}} type="text" placeholder="" value="Some Value" />
-                      {/* <i style={{fontSize: '1.5rem', color: 'green', marginTop: '10px', marginBottom: '20px', marginLeft: '20px'}} class="fa-regular fa-pen-to-square"></i> */}
                   </div>
               </div>
               <div style={{  paddingBottom: '30px', width: '48%'}}>
                   <Form.Label style={{paddingBottom: '5px', fontWeight: '500', paddingLeft: '5px'}}>CVV</Form.Label>
                   <div style={{display: 'flex', flexDirection: 'row'}}>
                       <Form.Control style={{flex: 1, height:'50px'}} type="text" placeholder="" value="Some Value" />
-                      {/* <i style={{fontSize: '1.5rem', color: 'green', marginTop: '10px', marginBottom: '20px', marginLeft: '20px'}} class="fa-regular fa-pen-to-square"></i> */}
                   </div>
               </div>
             </div>
@@ -115,11 +88,6 @@ export default function PaymentPortal() {
               </Link>
             </div>
         </div>
-
-
-
-
-
       </div>
     </div>
   )
