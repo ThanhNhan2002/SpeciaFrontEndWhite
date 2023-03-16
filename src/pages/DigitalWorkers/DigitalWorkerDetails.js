@@ -44,6 +44,8 @@ export default () => {
 
     const [resultModalShow, setResultModalShow] = useState(false)
 
+    let executeTimer;
+
     useEffect(() => {
         setDigitalWorker(digitalWorkers.find(item => item.id == digitalWorkerId))
     }, [digitalWorkerId, digitalWorker]);
@@ -58,7 +60,7 @@ export default () => {
     function openBotExecutingModal(){
         setRuntimeParameterModalShow(false)
         setBotExecutingModalShow(true)
-        setTimeout(()=> {
+        executeTimer = setTimeout(()=> {
             closeBotExecutingModal()
         }, 3000)
         

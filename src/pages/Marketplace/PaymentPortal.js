@@ -11,9 +11,20 @@ export default function PaymentPortal() {
 
   const [paymentResult, setPaymentResult] = useState(false);
   const [isExecuting, setExecuting] = useState(false);
+
+  function executing() {
+    setExecuting(true);
+    setTimeout( executingSucceeded, 3000);
+  }
+
+  function executingSucceeded() {
+    stopExecuting();
+    setPaymentResult(true);
+  }
   
-  function closeExecuting () {
+  function stopExecuting () {
     setExecuting(false);
+    setPaymentResult(false);
   }
 
   return (
@@ -95,17 +106,17 @@ export default function PaymentPortal() {
             <div style={{textAlign: 'right', marginTop: '30px'}}>
               
                 {/* <Button onClick={() => setPaymentResult(true)} style={{paddingRight: '15px', paddingLeft: '15px', width: '200px', height:'50px'}} variant="secondary">Pay</Button> */}
-                <Button onClick={() => setExecuting(true)} style={{paddingRight: '15px', paddingLeft: '15px', width: '200px', height:'50px'}} variant="secondary">Pay</Button>
+                <Button onClick={executing} style={{paddingRight: '15px', paddingLeft: '15px', width: '200px', height:'50px'}} variant="secondary">Pay</Button>
               
             </div>
         </div>
       </div>
 
+      <ExecutingModal isShow={isExecuting} onHide={stopExecuting}>
+      </ExecutingModal>
+
       <PurchaseResultModal isShow={paymentResult}>
       </PurchaseResultModal>
-
-      <ExecutingModal isShow={isExecuting} onHide={closeExecuting}>
-      </ExecutingModal>
     </div>
   )
 }

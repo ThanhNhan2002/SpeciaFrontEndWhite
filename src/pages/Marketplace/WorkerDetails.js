@@ -32,9 +32,9 @@ export default() =>  {
                         <p style={{fontSize: '2rem', fontWeight: '600', marginBottom: '10px'}}>Digital Worker {digitalWorkerId}</p>
                         <p style={{fontSize: '1.1rem', fontWeight: '400', color: 'rgb(150, 150, 150)'}}>Spectar Group</p>
                     </div>
-                    <div style={{display: 'flex', flexDirection:'column', height: '80px', justifyContent:'space-between', alignItems:'center' }}>
-                      {/* <Button onClick={() => setPurchaseResult(true)} style={{paddingRight: '20px', paddingLeft: '20px', width: '200px'}} variant="secondary">Free Trial</Button> */}
-                      {/* <Button onClick={() => setPurchaseResult(true)} style={{paddingRight: '20px', paddingLeft: '20px', width: '200px'}} variant="secondary">$19.99</Button> */}
+                    <div style={{display: 'flex', height: '80px',flexDirection:'column',  justifyContent:'space-between', alignItems:'center' }}>
+                      {/* <Button onClick={() => setPurchaseResult(true)} style={{paddingRight: '20px', paddingLeft: '20px', width: '200px'}} variant="secondary">Free Trial</Button>
+                      <Button onClick={() => setPurchaseResult(true)} style={{paddingRight: '20px', paddingLeft: '20px', width: '200px'}} variant="secondary">$19.99</Button> */}
                       <Link to= {`/marketplace/${digitalWorkerId}/initialparameters`}>
                         <Button style={{paddingRight: '20px', paddingLeft: '20px', width: '200px'}} variant="secondary">$19.99</Button>
                       </Link>

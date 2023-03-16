@@ -9,7 +9,7 @@ export default (props) => {
     
     return (
         <>
-            <Modal show={props.isShow} onHide={props.onClose} centered>
+            <Modal show={props.isShow} centered>
                 <Modal.Body>
                     <div style={{paddingLeft: '30px', paddingRight: '30px', paddingBottom: '20px', paddingTop: '20px'}}>
                         <p style={{fontSize: '2rem'}}>Please wait!</p>
@@ -20,7 +20,7 @@ export default (props) => {
                             </Spinner>
                         </div>
                         <div style={{textAlign: 'center'}}>
-                            <Button style={{paddingLeft: '20px', paddingRight: '20px'}} variant="secondary" onClick={props.onClose}>
+                            <Button style={{paddingLeft: '20px', paddingRight: '20px'}} variant="secondary" onClick={props.onHide}>
                                 Terminate
                             </Button>
                         </div>
