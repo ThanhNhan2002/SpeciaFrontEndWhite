@@ -37,7 +37,7 @@ export default function InitialParameters() {
                   </div>
                   <div style={{ marginTop: '25px', display:'flex', flexDirection:'column'}}>
                       <div>
-                        <p style={{fontSize: '1.9rem', fontWeight: '700'}}>Digital Worker 1</p>
+                        <p style={{fontSize: '1.9rem', fontWeight: '700'}}>Digital Worker {digitalWorkerId}</p>
                       </div>
                       <div>
                         <p style={{fontSize: '1.1rem', fontWeight: '200'}}>by Spectar Group</p>
@@ -48,7 +48,7 @@ export default function InitialParameters() {
                   </div>
 
                   <div style={{ margin: '24px 25px 0px 0px', flex:'1', textAlign:'right'}}>
-                    <Link to="/marketplace/:digitalWorkerId" style={{textDecoration: 'none', color: 'black'}}>
+                    <Link to={`/marketplace/${digitalWorkerId}`} style={{textDecoration: 'none', color: 'black'}}>
                           <button className='btn-close' style={{"fontSize": '1.2rem', marginTop: '20px', marginLeft: '20px'}}></button>
                     </Link>
                   </div>
