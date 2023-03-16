@@ -11,24 +11,18 @@ import Cookies from 'js-cookie';
 
 export default () => {
 
-
     const navigate = useNavigate();
-
-
-
     const checkUserToken = () => {
-
         let token = Cookies.get('oidc_id_token')
         Cookies.oidc_id_token ="atoken"
         if (token){
             return navigate('/');
         }
     }
+    
     useEffect(() => {
             checkUserToken();
         });
-
-    
 
     function signInWithAzure(){
         window.location.href = 'https://develop.platform.specia.ai/api/v1/auth/login';
