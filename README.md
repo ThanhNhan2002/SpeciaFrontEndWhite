@@ -6,6 +6,11 @@ This frontend project is developed for the new product launch of [Spectar Group]
 
 Project demo: [https://youtu.be/2MjJZAmmidI](https://youtu.be/JC074D4Ljbc) 
 
+To log in: you need to set the oidc_id_token:
+- Go to inspect ⇒ console
+- Set the oidc_id_token:
+  document.cookie = "oidc_id_token=aValue";
+
 ## Features
 * Login/logout/signup user-based page
 * Landing page
