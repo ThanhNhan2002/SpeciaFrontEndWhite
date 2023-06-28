@@ -20,19 +20,19 @@ export default (props) => {
                         <p>Please provide all required runtime parameters</p>
                         <div style={{paddingBottom: '30px'}}>
                             <Form.Label style={{paddingBottom: '5px', fontWeight: '500'}}>Parameter 1</Form.Label>
-                            <Form.Control style={{height: '50px'}} type="text" placeholder="" value="Some Value" />
+                            <Form.Control style={{height: '50px'}} type="text" placeholder="Some Value" />
                         </div>
                         <div style={{paddingBottom: '30px'}}>
                             <Form.Label style={{paddingBottom: '5px', fontWeight: '500'}}>Parameter 2</Form.Label>
-                            <Form.Control style={{height: '50px'}} type="text" placeholder="" value="Some Value" />
+                            <Form.Control style={{height: '50px'}} type="text" placeholder="Some Value" />
                         </div>
                         <div style={{  paddingBottom: '30px'}}>
                             <Form.Label style={{paddingBottom: '5px', fontWeight: '500'}}>Parameter 3</Form.Label>
-                            <Form.Control style={{height: '50px'}} type="text" placeholder="" value="Some Value" />
+                            <Form.Control style={{height: '50px'}} type="text" placeholder="Some Value" />
                         </div>
                         <div style={{paddingBottom: '40px'}}>
                             <Form.Label style={{paddingBottom: '5px', fontWeight: '500'}}>Parameter 4</Form.Label>
-                            <Form.Control style={{height: '50px'}} type="text" placeholder="" value="Some Value" />
+                            <Form.Control style={{height: '50px'}} type="text" placeholder="Some Value" />
                         </div>
                         <div style={{textAlign: 'right'}}>
                             <Button style={{paddingLeft: '20px', paddingRight: '20px'}} variant="secondary" onClick={props.onRun}>

@@ -13,28 +13,28 @@ import React, { Component } from 'react';
                 <div style={{paddingBottom: '30px'}}>
                     <Form.Label style={{paddingBottom: '5px', fontWeight: '500', paddingLeft: '5px'}}>Parameter 1</Form.Label>
                     <div style={{display: 'flex', flexDirection: 'row'}}>
-                        <Form.Control style={{flex: 1}} type="text" placeholder="" value="Some Value" disabled/>
+                        <Form.Control style={{flex: 1}} type="text" placeholder="Some value"/>
                         <i style={{fontSize: '1.5rem', color: 'green', marginTop: '10px', marginBottom: '20px', marginLeft: '20px'}} class="fa-regular fa-pen-to-square"></i>
                     </div>
                 </div>
                 <div style={{paddingBottom: '30px'}}>
                     <Form.Label style={{paddingBottom: '5px', fontWeight: '500', paddingLeft: '5px'}}>Parameter 2</Form.Label>
                     <div style={{display: 'flex', flexDirection: 'row'}}>
-                        <Form.Control style={{flex: 1}} type="text" placeholder="" value="Some Value" disabled/>
+                        <Form.Control style={{flex: 1}} type="text" placeholder="Some value"/>   
                         <i style={{fontSize: '1.5rem', color: 'green', marginTop: '10px', marginBottom: '20px', marginLeft: '20px'}} class="fa-regular fa-pen-to-square"></i>
                     </div>
                 </div>
                 <div style={{  paddingBottom: '30px'}}>
                     <Form.Label style={{paddingBottom: '5px', fontWeight: '500', paddingLeft: '5px'}}>Parameter 3</Form.Label>
                     <div style={{display: 'flex', flexDirection: 'row'}}>
-                        <Form.Control style={{flex: 1}} type="text" placeholder="" value="Some Value" disabled/>
+                        <Form.Control style={{flex: 1}} type="text" placeholder="Some value"/>   
                         <i style={{fontSize: '1.5rem', color: 'green', marginTop: '10px', marginBottom: '20px', marginLeft: '20px'}} class="fa-regular fa-pen-to-square"></i>
                     </div>
                 </div>
                 <div style={{paddingBottom: '30px'}}>
                     <Form.Label style={{paddingBottom: '5px', fontWeight: '500', paddingLeft: '5px'}}>Parameter 4</Form.Label>
                     <div style={{display: 'flex', flexDirection: 'row'}}>
-                        <Form.Control style={{flex: 1}} type="text" placeholder="" value="Some Value" disabled/>
+                        <Form.Control style={{flex: 1}} type="text" placeholder="Some value"/>   
                         <i style={{fontSize: '1.5rem', color: 'green', marginTop: '10px', marginBottom: '20px', marginLeft: '20px'}} class="fa-regular fa-pen-to-square"></i>
                     </div>
                 </div>
